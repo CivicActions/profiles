@@ -1,0 +1,229 @@
+{
+  "profile": {
+    "uuid": "a3af24c1-d43a-4f11-983a-e47c3e2e86e5",
+    "metadata": {
+      "title": "CMMC Level 1 Tailored Profile",
+      "last-modified": "2025-09-05T00:00:00+00:00",
+      "version": "1.1.1",
+      "oscal-version": "v1.1.3",
+      "roles": [
+        {
+          "id": "author",
+          "title": "Profile Author"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "78a9fccc-ff99-45cc-a1e2-5d5823f490f6",
+          "type": "organization",
+          "name": "CivicActions"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "author",
+          "party-uuids": [
+            "78a9fccc-ff99-45cc-a1e2-5d5823f490f6"
+          ]
+        }
+      ]
+    },
+    "imports": [
+      {
+        "href": "https://raw.githubusercontent.com/usnistgov/oscal-content/refs/heads/release-1.4/nist.gov/SP800-171/rev3/json/NIST_SP800-171_rev3_catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "SP_800_171_03.01.01",
+              "SP_800_171_03.01.02",
+              "SP_800_171_03.01.20",
+              "SP_800_171_03.01.22",
+              "SP_800_171_03.05.01",
+              "SP_800_171_03.05.02",
+              "SP_800_171_03.08.03",
+              "SP_800_171_03.10.01",
+              "SP_800_171_03.10.07",
+              "SP_800_171_03.13.01",
+              "SP_800_171_03.14.01",
+              "SP_800_171_03.14.02"
+            ]
+          }
+        ],
+        "exclude-controls": [
+          {
+            "with-ids": [
+              "SP_800_171_03.01.03"
+            ]
+          }
+        ]
+      }
+    ],
+    "merge": {
+      "as-is": true
+    },
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "A.03.01.01.ODP.01",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period for account inactivity before disabling."
+            }
+          ],
+          "values": [
+            "35 days"
+          ]
+        },
+        {
+          "param-id": "A.03.01.01.ODP.02",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period within which to notify account managers and designated personnel or roles when accounts are no longer required."
+            }
+          ],
+          "values": [
+            "2 hours during working hours or next business day"
+          ]
+        },
+        {
+          "param-id": "A.03.01.01.ODP.03",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period within which to notify account managers and designated personnel or roles when users are terminated or transferred."
+            }
+          ],
+          "values": [
+            "2 hours during working hours or next business day"
+          ]
+        },
+        {
+          "param-id": "A.03.01.01.ODP.04",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period within which to notify account managers and designated personnel or roles when system usage or the need-to-know changes for an individual."
+            }
+          ],
+          "values": [
+            "4 hours during working hours or next business day"
+          ]
+        },
+        {
+          "param-id": "A.03.01.01.ODP.05",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period of expected inactivity requiring users to log out of the system."
+            }
+          ],
+          "values": [
+            "30 minutes"
+          ]
+        },
+        {
+          "param-id": "A.03.01.01.ODP.06",
+          "label": "circumstances",
+          "guidelines": [
+            {
+              "prose": "circumstances requiring users to log out of the system."
+            }
+          ],
+          "values": [
+            "FIXME"
+          ]
+        },
+        {
+          "param-id": "A.03.01.20.ODP.01",
+          "label": "security requirements",
+          "guidelines": [
+            {
+              "prose": "security requirements to be satisfied on external systems prior to allowing the use of or access to those systems by authorized individuals."
+            }
+          ],
+          "values": [
+            "FIXME"
+          ]
+        },
+        {
+          "param-id": "A.03.05.01.ODP.01",
+          "label": "circumstances or situations",
+          "guidelines": [
+            {
+              "prose": "circumstances or situations that require re-authentication."
+            }
+          ],
+          "values": [
+            "FIXME"
+          ]
+        },
+        {
+          "param-id": "A.03.05.02.ODP.01",
+          "label": "devices or types of devices",
+          "guidelines": [
+            {
+              "prose": "devices or types of devices to be uniquely identified and authenticated before establishing a connection."
+            }
+          ],
+          "values": [
+            "FIXME"
+          ]
+        },
+        {
+          "param-id": "A.03.10.01.ODP.01",
+          "label": "frequency",
+          "guidelines": [
+            {
+              "prose": "the frequency at which to review the access list detailing authorized facility access by individuals."
+            }
+          ],
+          "values": [
+            "quarterly or when any permissions or access list change occurs"
+          ]
+        },
+        {
+          "param-id": "A.03.14.01.ODP.01",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period within which to install security-relevant software updates after the release of the updates."
+            }
+          ],
+          "values": [
+            "15 days for critical and high updates",
+            "30 days for medium updates",
+            "180 days for low updates"
+          ]
+        },
+        {
+          "param-id": "A.03.14.01.ODP.02",
+          "label": "time period",
+          "guidelines": [
+            {
+              "prose": "the time period within which to install security-relevant firmware updates after the release of the updates."
+            }
+          ],
+          "values": [
+            "15 days for critical and high updates",
+            "30 days for medium updates",
+            "180 days for low updates"
+          ]
+        },
+        {
+          "param-id": "A.03.14.02.ODP.01",
+          "label": "frequency",
+          "guidelines": [
+            {
+              "prose": "the frequency at which malicious code protection mechanisms perform scans."
+            }
+          ],
+          "values": [
+            "at least weekly and when new malicious code is identified"
+          ]
+        }
+      ]
+    }
+  }
+}
